@@ -1,0 +1,183 @@
+.container {
+  @include mq(pc) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    min-width: 1080px;
+  }
+}
+
+#sidebar {
+  @include mq(pc) {
+    margin: 160px 50px 0 0;
+  }
+}
+
+#main {
+  @include mq(pc) {
+    margin-top: 160px;
+    width: 780px;
+  }
+}
+
+#footer {
+  @include mq(sp) {
+    pz
+  }
+  @include mq(pc) {
+    margin-top: 150px;
+  }
+}
+
+#index {
+  #sidebar,
+  #main {
+    margin-top: 40px;
+  }
+  section {
+    @include mq(sp) {
+      padding: 0 6.25%;
+    }
+    &:nth-child(n+2) {
+      margin-top: 5rem;
+    }
+  }
+  .seasonal {
+    @include mq(sp) {
+      padding: 0 6.25%;
+    }
+    .ul_01 {
+      margin-top: 3.4rem;
+    }
+  }
+  .pickup {
+    .ul_01 {
+      margin-top: 3.4rem;
+    }
+  }
+  .ranking {
+    .ul_01 {
+      margin-top: 3.4rem;
+    }
+  }
+  .feature {
+    .ul_01 {
+      margin-top: 3.4rem;
+    }
+    .div_01 {
+      margin: 2.4rem auto 0;
+    }
+  }
+  #indexFacebook {
+    margin-top: 9rem;
+    @include mq(sp) {
+      margin: 9rem 6.25% 0;
+    }
+  }
+}
+
+#itemList {
+  .nav_01 {
+    margin-top: 3.6rem;
+  }
+  .ul_01 {
+    margin-top: 3rem;
+  }
+  .nav_02 {
+    margin-top: 8.2rem;
+  }
+}
+
+#featureList {
+  .ul_01 {
+    margin-top: 3.4rem;
+  }
+  .nav_01 {
+    margin-top: 4rem;
+  }
+}
+
+#featureDetail {
+  .recommend {
+    .ul_01 {
+      margin-top: 3rem;
+    }
+  }
+}
+
+#about {
+  .message {
+    .nav_01 {
+      margin-top: 4rem;
+    }
+    .messageContent {
+      margin-top: 7.4rem;
+    }
+  }
+  .company {
+    margin-top: 8.6rem;
+    .table_01 {
+      margin-top: 2.6rem;
+    }
+  }
+  .history {
+    margin-top: 8.6rem;
+    .table_01 {
+      margin-top: 2.6rem;
+    }
+  }
+}
+
+#guide {
+  .guide {
+    .p_01 {
+      margin-top: 5rem;
+    }
+    .nav_01 {
+      margin-top: 2.4rem;
+    }
+    .guideContent {
+      margin-top: 2.4rem;
+    }
+  }
+}
+
+#privacy {
+  .privacy {
+    .p_01 {
+      margin-top: 5rem;
+    }
+    .privacyContent {
+      margin-top: 2.4rem;
+    }
+  }
+}
+
+#order {
+  .order {
+    .table_01 {
+      margin-top: 4rem;
+    }
+    .p_01 {
+      margin-top: 3.2rem;
+      text-align: left;
+    }
+  }
+}
+
+#qaa {
+  .qaa {
+    .qaaContent {
+      margin-top: 7.6rem;
+    }
+  }
+}
+
+#sitemap {
+  .sitemap {
+    .sitemapContent {
+      margin-top: 7.6rem;
+    }
+  }
+}

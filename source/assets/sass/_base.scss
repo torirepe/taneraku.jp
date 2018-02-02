@@ -1,5 +1,10 @@
 html {
-  font-size: 10px;
+  @include mq(sp) {
+    font-size: 10 / 400 * 100 + vw;
+  }
+  @include mq(pc) {
+    font-size: 10px;
+  }
 }
 
 * {
@@ -19,7 +24,7 @@ body {
   letter-spacing: 0;
   line-height: 0;
   word-wrap: break-word;
-  color: $c-black;
+  color: $c-darkgrey;
   background-color: $c-lightbeige;
 }
 

@@ -1,8 +1,38 @@
-//h3
+//h2
+#itemList .h2_01 {
+  position: relative;
+  div {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -1.2em;
+    padding: 1.2em;
+    background-color: rgba(255,255,255,.5);
+    width: 100%;
+    font-size: 2.2rem;
+    text-align: center;
+    letter-spacing: .1em;
+  }
+}
+
+#featureDetail .h2_01,
+#about .company .h3_01,
+#about .history .h3_01,
+#order .order .h2_01 {
+  font-size: 2.6rem;
+  line-height: 1;
+}
+
 #index .seasonal .h3_01,
 #index .pickup .h3_01,
-#index .ranking .h3_01
-#index .feature .h3_01 {
+#index .ranking .h3_01,
+#index .feature .h3_01,
+#featureList .h3_01,
+#about .message .h2_01,
+#guide .guide .h2_01,
+#privacy .privacy .h2_01,
+#qaa .qaa .h2_01,
+#sitemap .sitemap .h2_01 {
   font-family: $f-crimson;
   text-align: center;
   font-size: 3rem;
@@ -10,25 +40,45 @@
   i {
     display: block;
     margin-top: .6em;
-    font-size: 1.7rem;
+    font-family: $f-tsuku;
+    @include mq(sp) {
+      font-size: 1.4rem;
+    }
+    @include mq(pc) {
+      font-size: 1.7rem;
+    }
   }
 }
 
 //ul
 #index .seasonal .ul_01,
-#index .pickup .ul_01 {
+#index .pickup .ul_01,
+#itemList .ul_01,
+#featureDetail .recommend .ul_01 {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: flex-start;
   line-height: 1;
   li {
-    margin-left: 50px;
-    &:nth-child(3n+1) {
-      margin-left: 0;
+    @include mq(sp) {
+      width: 46.4%;
+      &:nth-child(2n) {
+        margin-left: 7.2%;
+      }
+      &:nth-child(n+3) {
+        margin-top: 7.2%;
+      }
     }
-    &:nth-child(n+4) {
-      margin-top: 28px;
+    @include mq(pc) {
+      margin-left: 50px;
+      width: 226px;
+      &:nth-child(3n+1) {
+        margin-left: 0;
+      }
+      &:nth-child(n+4) {
+        margin-top: 28px;
+      }
     }
     .name {
       margin-top: .4em;
@@ -41,10 +91,15 @@
     .stock {
       display: inline-block;
       margin-top: .6em;
-      padding: .4em;
       background-color: #d89a2f;
       font-size: 1.2rem;
       color: $c-white;
+      @include mq(sp) {
+        padding: .2em;
+      }
+      @include mq(pc) {
+        padding: .4em;
+      }
       &:after {
         content: ' ◯';
       }
@@ -63,11 +118,220 @@
   justify-content: space-between;
   align-items: flex-start;
   li {
-    width: 158px;
-    &:nth-child(n+2) {
+    position: relative;
+    @include mq(sp) {
+      width: 50%;
+      &:nth-child(n+4) {
+        display: none;
+      }
+    }
+    @include mq(pc) {
+      width: 158px;
+    }
+    &:before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+    &:nth-child(1) {
+      &:before {
+        content: '';
+        background-color: #d6d595;
+      }
+    }
+    &:nth-child(2) {
+      &:before {
+        content: '';
+        background-color: #cdd7dc;
+      }
+    }
+    &:nth-child(3) {
+      &:before {
+        content: '';
+        background-color: #e2c0a2;
+      }
     }
     a {
       background-color: $c-white;
+      line-height: 1;
+      .text {
+        padding: .2rem 1rem 1.6rem;
+        .no {
+          margin-top: .2em;
+          font-size: 1.6rem;
+          font-family: $f-crimson;
+        }
+        .name {
+          margin-top: .6em;
+          font-size: 1.2rem;
+        }
+        .price {
+          margin-top: .6em;
+          font-size: 1.1rem;
+        }
+      }
     }
+  }
+}
+#index .feature .ul_01,
+#featureList .ul_01 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  li {
+    @include mq(sp) {
+      width: 100%;
+      &:nth-child(n+2) {
+        margin-top: 2.4rem;
+      }
+    }
+    @include mq(pc) {
+      width: 374px;
+      &:nth-child(2n) {
+        margin-left: 32px;
+      }
+      &:nth-child(n+3) {
+        margin-top: 36px;
+      }
+    }
+    a {
+      line-height: 1;
+      time {
+        margin-top: .6em;
+        font-size: 1.1rem;
+        @include mq(sp) {
+          display: none;
+        }
+      }
+      div {
+        margin-top: .4em;
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+//btn
+#index .feature .div_01 {
+  @include mq(sp) {
+    width: 100%;
+  }
+  @include mq(pc) {
+    width: 376px;
+  }
+  a {
+    padding: 1.2em 0;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    color: $c-white;
+    background-color: #504e47;
+    text-align: center;
+    line-height: 1;
+  }
+}
+
+#itemList .nav_01 {
+  text-align: center;
+   > div {
+     display: inline-block;
+     &:nth-child(n+2) {
+       margin-left: 10px;
+     }
+     a {
+       padding: .6em 1em;
+       border-radius: 4px;
+       font-size: 1.4rem;
+       line-height: 1;
+       background-color: #fff;
+       &:hover {
+         background-color: #504e47;
+         color: #fff;
+       }
+     }
+   }
+}
+
+#featureList .nav_01,
+#itemList .nav_02 {
+  text-align: center;
+   > div {
+     display: inline-block;
+     &:nth-child(n+2) {
+       margin-left: 10px;
+     }
+     a {
+       padding: .1em .4em;
+       border-radius: 4px;
+       font-size: 2.2rem;
+       line-height: 1;
+       background-color: #fff;
+       font-family: $f-crimson;
+       color: #504e47;
+       &:hover {
+         background-color: #504e47;
+         color: #fff;
+       }
+     }
+   }
+  p {
+    margin-top: 1.6rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+}
+
+#guide .guide .p_01,
+#privacy .privacy .p_01,
+#order .order .p_01 {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+#about .message .nav_01,
+#guide .guide .nav_01 {
+  text-align: center;
+  div {
+    display: inline-block;
+    &:nth-child(n+2) {
+      margin-left: 2.8rem;
+    }
+    a {
+      border-radius: 4px;
+      padding: .4em 1em;
+      background-color: #6d6d6d;
+      color: $c-white;
+      font-size: 1.4rem;
+      line-height: 1;
+      &:before {
+        content: '▼ ';
+      }
+    }
+  }
+}
+
+#about .company .table_01,
+#about .history .table_01,
+#order .order .table_01 {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  width: 100%;
+  * {
+    border: 1px solid #bfbfbf;
+  }
+  th {
+    padding: 1.4em;
+    width: 186px;
+    background-color: #e4dac4;
+  }
+  td {
+    padding: 1.4em;
+    background-color: #ffffff;
   }
 }

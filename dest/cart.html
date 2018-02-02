@@ -43,7 +43,7 @@
     <meta property="og:image" content="">
     <meta property="og:site_name" content="#">
     <!-- /ogp -->
-    
+
     <!-- assets -->
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/picturefill.min.js"></script>
@@ -52,8 +52,134 @@
     <script src="assets/js/script.min.js"></script>
     <!-- /assets -->
 
+    <!-- typekit -->
+    <script src="https://use.typekit.net/qqf6cjh.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <!-- typekit -->
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+    <!-- google font -->
+
   </head>
   <body>
-    
+    <div id="cart" class="container">
+
+      <script type="text/javascript">
+include("includes/header.html");
+      </script>
+
+      <script type="text/javascript">
+include("includes/sidebar.html");
+      </script>
+
+      <main id="main">
+
+        <section class="cart">
+          <h2 class="h2_01">現在のカゴの中</h2>
+          <p class="p_01">お買い上げ商品の合計金額は「4,752円」です。</p>
+          <div class="form_area">
+        <form name="form1" id="form1" method="post" action="?">
+            <input type="hidden" name="transactionid" value="ada99cd93c39190054b2d48685fb96cfb51e7791">
+            <input type="hidden" name="mode" value="confirm">
+            <input type="hidden" name="cart_no" value="">
+            <input type="hidden" name="cartKey" value="1">
+            <input type="hidden" name="category_id" value="">
+                            <p>
+                    お買い上げ商品の合計金額は「<span class="price">4,428円</span>」です。
+                                                                                </p>
+
+            <table summary="商品情報">
+                <colgroup><col width="10%">
+                <col width="15%">
+                <col width="30%">
+                <col width="15%">
+                <col width="15%">
+                <col width="15%">
+                </colgroup><tbody><tr>
+                    <th class="alignC">削除</th>
+                    <th class="alignC">商品写真</th>
+                    <th class="alignC">商品名</th>
+                    <th class="alignC">単価</th>
+                    <th class="alignC">数量</th>
+                    <th class="alignC">小計</th>
+                </tr>
+                                    <tr style="">
+                        <td class="alignC"><a href="?" onclick="fnFormModeSubmit('form1', 'delete', 'cart_no', '1'); return false;">削除</a>
+                        </td>
+                        <td class="alignC">
+                        <a class="expansion" target="_blank" href="/upload/save_image/01231016_52e06d6dab45a.jpg">
+                                <img src="/resize_image.php?image=01231016_52e06d69b9b13.jpg&amp;width=65&amp;height=65" alt="【C33】栗-中(焦)">
+                            </a>
+                        </td>
+                        <td><strong>【C33】栗-中(焦)</strong><br>
+                                                                                </td>
+                        <td class="alignR">
+                            2,052円
+                        </td>
+                        <td class="alignC">1
+                            <ul id="quantity_level">
+                                <li><a href="?" onclick="fnFormModeSubmit('form1','up','cart_no','1'); return false"><img src="/user_data/packages/custom/img/button/btn_plus.jpg" width="16" height="16" alt="＋"></a></li>
+                                <li><a href="?" onclick="fnFormModeSubmit('form1','down','cart_no','1'); return false"><img src="/user_data/packages/custom/img/button/btn_minus.jpg" width="16" height="16" alt="-"></a></li>
+                            </ul>
+                        </td>
+                        <td class="alignR">2,052円</td>
+                    </tr>
+                                    <tr style="">
+                        <td class="alignC"><a href="?" onclick="fnFormModeSubmit('form1', 'delete', 'cart_no', '2'); return false;">削除</a>
+                        </td>
+                        <td class="alignC">
+                        <a class="expansion" target="_blank" href="/upload/save_image/10240910_59ee84e1d1a08.jpg">
+                                <img src="/resize_image.php?image=10240910_59ee84e1ddacc.jpg&amp;width=65&amp;height=65" alt="お試しセット(年末)">
+                            </a>
+                        </td>
+                        <td><strong>お試しセット(年末)</strong><br>
+                                                                                </td>
+                        <td class="alignR">
+                            2,376円
+                        </td>
+                        <td class="alignC">1
+                            <ul id="quantity_level">
+                                <li><a href="?" onclick="fnFormModeSubmit('form1','up','cart_no','2'); return false"><img src="/user_data/packages/custom/img/button/btn_plus.jpg" width="16" height="16" alt="＋"></a></li>
+                                <li><a href="?" onclick="fnFormModeSubmit('form1','down','cart_no','2'); return false"><img src="/user_data/packages/custom/img/button/btn_minus.jpg" width="16" height="16" alt="-"></a></li>
+                            </ul>
+                        </td>
+                        <td class="alignR">2,376円</td>
+                    </tr>
+                                <tr>
+                    <th colspan="5" class="alignR">小計</th>
+                    <td class="alignR">4,428円</td>
+                </tr>
+                <tr>
+                    <th colspan="5" class="alignR">合計</th>
+                    <td class="alignR"><span class="price">4,428円</span></td>
+                </tr>
+                            </tbody></table>
+                                    <p class="alignC">上記内容でよろしければ「購入手続きへ」ボタンをクリックしてください。</p>
+                            <div class="btn_area">
+                <ul>
+                    <li>
+                                                    <a href="http://www.taneraku.jp/products/detail.php?product_id=1003" onmouseover="chgImg('/user_data/packages/custom/img/button/btn_back_on.jpg','back1');" onmouseout="chgImg('/user_data/packages/custom/img/button/btn_back.jpg','back1');">
+                                <img src="/user_data/packages/custom/img/button/btn_back.jpg" alt="戻る" name="back1"></a>
+                                            </li>
+                    <li>
+                                                    <input type="hidden" name="cartKey" value="1">
+                            <input type="image" onmouseover="chgImgImageSubmit('/user_data/packages/custom/img/button/btn_buystep_on.jpg',this)" onmouseout="chgImgImageSubmit('/user_data/packages/custom/img/button/btn_buystep.jpg',this)" src="/user_data/packages/custom/img/button/btn_buystep.jpg" alt="購入手続きへ" name="confirm">
+                                            </li>
+                </ul>
+            </div>
+        </form>
+        </div>
+        </section>
+
+
+
+      </main>
+
+      <script type="text/javascript">
+include("includes/footer.html");
+      </script>
+
+    </div>
   </body>
 </html>

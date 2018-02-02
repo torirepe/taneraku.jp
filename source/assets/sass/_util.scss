@@ -1,10 +1,7 @@
 //break point
 $breakpoints: (
   'sp': 'screen and (max-width: 425px)',
-  'tb': 'screen and (min-width: 426px) and (max-width: 768px)',
-  'pc': 'screen and (min-width: 769px)',
-  'st': 'screen and (max-width: 768px)',
-  'tp': 'screen and (min-width: 426px)',
+  'pc': 'screen and (min-width: 426px)',
 ) !default;
 @mixin mq($breakpoint: sp) {
   @media #{map-get($breakpoints, $breakpoint)} {
@@ -23,42 +20,19 @@ $c-white: #fff;
 $c-black: #000;
 $c-grey: #d2d2d2;
 $c-lightgrey: #eee;
-$c-darkgrey: #555;
+$c-darkgrey: #504e47;
 $c-beige: #e4dac4;
-$c-lightbeige: #fffbf3;
+$c-lightbeige: #f8f6ee;
 $c-yellow: #f8e764;
+$c-blue: #5b84c3;
 
 //control
 .sp {
-  @include mq(tb) {
-    display: none;
-  }
-  @include mq(pc) {
-    display: none;
-  }
-}
-.tb {
-  @include mq(sp) {
-    display: none;
-  }
-  @include mq(pc) {
-    display: none;
-  }
-}
-.pc {
-  @include mq(sp) {
-    display: none;
-  }
-  @include mq(tb) {
-    display: none;
-  }
-}
-.st {
   @include mq(pc) {
     display: none !important;
   }
 }
-.tp {
+.pc {
   @include mq(sp) {
     display: none !important;
   }
@@ -74,9 +48,6 @@ $c-yellow: #f8e764;
 @mixin fz($px) {
   @include mq(sp) {
     font-size: $px / 640 * 100 + vw;
-  }
-  @include mq(tb) {
-    font-size: $px + px;
   }
   @include mq(pc) {
     font-size: $px + px;
